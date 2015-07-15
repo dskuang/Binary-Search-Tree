@@ -1,0 +1,36 @@
+//Dominic Kuang
+//cs100wdy
+//PA1
+
+a.   Inorder traversal recursively traverses left, prints, and traverses right.
+     This reaches all the nodes from the left end of the tree, to the root,
+     and to the right. We use this to print cause it covers everything 
+     in an orderly fashion.
+
+     Postorder traversal recursively traverses left, traverses right, then
+     deletes. This traversal covers all of the children leaf nodes from the
+     left to the leaf nodes of the right. It eventually moves up the tree
+     to the root node last, deleting as it goes. If the traversal does not
+     delete the root node last, it would not be able to reach all other nodes
+     since the root would be gone.
+
+
+b.   BSTIterator<Data>& operator++() {
+       curr = curr->successor();
+       return *this;
+     }
+  
+  
+     This overloads the pre-increment operator. The expression is a++
+     An example would be:
+
+     vector<int>::iterator vit = v.begin();
+     vector<int>::iterator ven = v.end();
+  
+     for(; vit != ven; vit++) {
+       cout<< "Inserting : " << *vit <<endl;
+      }
+     
+     
+     vit++ gets the successor of the next node in the iterator rather than 
+     incrementing by 1
